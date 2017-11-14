@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="0dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:textSize="15dp"
+        android:padding="3dp"
+        android:textAllCaps="true"
+        android:text="kljaldjsaldjsald"/>
+
+
+    <ImageButton
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:src="@drawable/image_1"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+   <LinearLayout
+       android:id="@+id/footer"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_below="@+id/image"
+       android:padding="2dp">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:orientation="horizontal"
+           android:layout_weight="1">
+
+           <Button
+               android:id="@+id/like"
+               android:layout_width="45dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="bottom|start"
+               android:layout_margin="2dp"
+               android:text="10"
+               android:background="@drawable/btn_star_big_off" >
+           </Button>
+       </LinearLayout>
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="right"
+           android:padding="3dp">
+           <TextView
+               android:id="@+id/Comments"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:padding="1dp"
+               android:text="Comments:"
+               android:textSize="16dp"/>
+
+           <TextView
+               android:id="@+id/commentsNum"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toEndOf="@+id/Comments"
+               android:padding="1dp"
+               android:text="10"
+               android:textSize="16dp"/>
+           <TextView
+               android:id="@+id/date"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:padding="1dp"
+               android:text="Date:"
+               android:layout_below="@+id/Comments"
+               android:textSize="16dp"/>
+           <TextView
+               android:id="@+id/dateFormat"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_toEndOf="@+id/date"
+               android:layout_below="@+id/commentsNum"
+               android:padding="1dp"
+               android:gravity="right"
+               android:text="10/10/2017"
+               android:textSize="16dp"/>
+       </RelativeLayout>
+
+   </LinearLayout>
+
+
+</RelativeLayout>
